@@ -21,7 +21,7 @@ if (!empty($roll) || !empty($name) || !empty($password) || !empty($email) || !em
   $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
   if (mysqli_connect_error()) 
   { 
-    die('Connection Error ('.mysqli_connection_error().')'.mysqli_connect_error());
+    die('Connection Error ('.mysqli_connect_error().')'.mysqli_connect_error());
   } 
   else
   { 
@@ -45,10 +45,11 @@ if (!empty($roll) || !empty($name) || !empty($password) || !empty($email) || !em
     } 
     else
     { 
-      echo "Someone already registered usingthis email."
+      echo "Someone already registered usingthis email.";
     }
     $stmt->close();
     $conn->close();
+    }
 }
 else 
 { 
