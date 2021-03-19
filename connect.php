@@ -15,14 +15,13 @@
 
   if (mysqli_connect_error())
   {
-    die('Connect Error ('. mysqli_connect_errno() .') '
-    . mysqli_connect_error());
+    die('Connect Error ('. mysqli_connect_errno() .') '. mysqli_connect_error());
   }
   else
   {
     if($email != "")
     { 
-    $res = mysqli_query($conn, "SELECT * from `simpleregistration` where email='".$email."'");
+    $res = mysqli_query($conn, "SELECT * from `registration` where email='".$email."'");
     $num_rows= mysqli_num_rows($res);
       if($num_rows>0)
       {
@@ -32,7 +31,7 @@
     }
     if($mobile !="")
     {
-      $res = mysqli_query($conn,"SELECT * FROM `simpleregistration` where mobile='".$mobile."'");
+      $res = mysqli_query($conn,"SELECT * FROM `registration` where mobile='".$mobile."'");
       $num_rows= mysqli_num_rows($res);
         if($num_rows>1)
         {
@@ -40,7 +39,7 @@
           die();
         }
     }
-    $sql = "INSERT INTO simpleregistration (username, password, email, mobile) values ('$username','$password','$email','$mobile')";
+    $sql = "INSERT INTO registration (username, password, email, mobile) values ('$username','$password','$email','$mobile')";
   
     if ($conn->query($sql))
     {
