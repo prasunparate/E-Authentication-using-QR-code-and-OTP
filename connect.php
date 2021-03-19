@@ -31,7 +31,7 @@
     }
     if($mobile !="")
     {
-      $res = mysqli_query($conn,"SELECT * FROM `registration` where mobile='".$mobile."'");
+      $res = mysqli_query($conn,"SELECT * FROM `registration` where mob='".$mobile."'");
       $num_rows= mysqli_num_rows($res);
         if($num_rows>1)
         {
@@ -39,7 +39,7 @@
           die();
         }
     }
-    $sql = "INSERT INTO registration (username, password, email, mobile) values ('$username','$password','$email','$mobile')";
+    $sql = "INSERT INTO registration (name, password, email, mob) values ('$username','$password','$email','$mobile')";
   
     if ($conn->query($sql))
     {
