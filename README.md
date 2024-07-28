@@ -6,4 +6,4 @@ Then put all those files in a folder and run Simple registration.html file.
 This is how you can run the project.
 
 This project is all about the authentication of the user if he/she has already registered their data in the database.
-Basically, one with the authentic credentials can log in to its user profile other wise they are discarded. Moreover, its a two way authentication system in which user have to enter OTP and also have to scan the QR code.
+This project focuses on user authentication by verifying if their data is already registered in the database. Users with valid credentials can log in to their profiles, while others are denied access. Additionally, it implements a two-factor authentication system, requiring users to enter an OTP and scan a QR code.
