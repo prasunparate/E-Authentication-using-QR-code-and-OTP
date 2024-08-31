@@ -26,7 +26,7 @@ if(isset($_POST['save']))
 //resend OTP
 if(isset($_POST['resend']))
 {
-    $message="<p class='w3-text-green'>Sucessfully send OTP to your mail.</p>";
+    $message="<p class='w3-text-green'>Sucessfully sent OTP to your mail.</p>";
     $rno=$_SESSION['otp'];
     $to=$_SESSION['email'];
     $subject = "OTP";
